@@ -26,6 +26,6 @@ Changelog
 
 1.0 Initial Release
 
-Tested Distro
+Tested Distros
 =====================
 * Linux Mint 17
