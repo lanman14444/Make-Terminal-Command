@@ -17,3 +17,15 @@ Installation
 12. Open a terminal window
 13. Naviagte to the directory that the script is in the terminal
 14. Then to run it type ./Make-Terminal-Command
+
+Changelog
+=====================
+(+) Added feature
+(-) Remove feature
+(*) Feature
+
+1.0 Initial Release
+
+Tested Distro
+=====================
+* Linux Mint 17
