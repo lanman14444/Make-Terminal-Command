@@ -1,9 +1,9 @@
 Make-Terminal-Command
 =====================
-
 A bash script to create a new command in Terminal
-
 Installation
+=====================
+
 1. Copy the code from make-terminal file.
 2. Open a blank file right-click then left-click "Paste."
 3. Left click "File" then left-click "Save as".
