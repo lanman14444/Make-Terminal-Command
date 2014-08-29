@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "This software is covered by GNU Affero GPL v3.0"
-echo "A copy of this software can be found at http://www.gnu.org/licenses/agpl.html "
+echo "A copy of this license can be found at http://www.gnu.org/licenses/agpl.html "
 echo ""
 function mkCmd {
         if [[ $differFileNameYN == "n" && "no" && "N" && "No" ]]
