@@ -1,32 +1,56 @@
 #!/bin/bash
 echo "This software is covered by GNU GPL v3.0"
-echo "A copy of this license can be found at http://www.gnu.org/licenses/agpl.html "
+echo "A copy of this sothe ftware can be found at http://www.gnu.org/licenses/agpl.html "
 echo ""
-function mkCmd {
+function mkCmdGlobal {
         if [[ $differFileNameYN == "n" && "no" && "N" && "No" ]]
                 then
                 echo "Moving $fileName to /usr/local/bin."
-                sudo cp $fileName /usr/local/bin
+                echo "sudo cp $fileName /usr/local/bin"
                 echo "Chaning $FileName's permissions to root."
-                sudo echo chown root:root /usr/local/bin/$fileName
+                sudo chown root:root /usr/local/bin/$fileName
                 echo "Making $fileName executable."
-                sudo chmod 755 /usr/local/bin/$fileName
+                sudo echo chmod 755 /usr/local/bin/$fileName
         else
-                echo "Please enter the new file name. >> "
+                echo "Please enter the new file name."
                 read newFileName
                 echo "Renaming $fileName to $newFileName."
                 mv $fileName $newFileName
                 echo "Copying $newFileName to /usr/local/bin"
                 sudo cp $newFileName /usr/local/bin
                 echo "Chaning $newFileName's permissions to root."
-                sudo echo chown root:root /usr/local/bin/$newFileName
+                sudo chown root:root /usr/local/bin/$newFileName
                 echo "Making $newFileName executable." 
                 sudo chmod 755 /usr/local/bin/$newFileName
         fi
 }
-
-echo "Please enter the filename that you would like to make a command. >> "
+function mkCmdLocal {
+        if [[ $differFileNameYN == "n" && "no" && "N" && "No" ]]
+                then
+                echo "Moving $fileName to ~/bin"
+                cp $fileName ~/bin
+                echo "Making $fileName executable."
+                chmod 755 ~/bin/$fileName
+        else
+                echo "Please enter the new file name."
+                read newFileName
+                echo "Renaming $fileName to $newFileName."
+                mv $fileName $newFileName
+                echo "Copying $newFileName to ~/bin"
+                cp $newFileName ~/bin
+                echo "Making $newFileName executable." 
+                chmod 755 ~/bin/$newFileName
+        fi
+}
+echo "Please enter the filename that you would like to make a command."
 read fileName
 echo "Do you want the command to differ from differ from the file name? [Y/N]"
 read differFileNameYN
-mkCmd
+echo "Do you want the command to be System wide? [Y/N] (No will install it for the user only)"
+read sysOrUsr
+if [[ sysOrUsr == "Y" && sysOrUsr == "y" && sysOrUsr == "Yes" && sysOrUsr == "yes" ]]
+	then
+	mkCmdGlobal
+else
+	mkCmdLocal
+fi
