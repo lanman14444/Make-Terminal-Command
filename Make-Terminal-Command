@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "This software is covered by GNU Affero GPL v3.0"
+echo "This software is covered by GNU GPL v3.0"
 echo "A copy of this license can be found at http://www.gnu.org/licenses/agpl.html "
 echo ""
 function mkCmd {
