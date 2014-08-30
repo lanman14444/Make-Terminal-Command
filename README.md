@@ -1,6 +1,6 @@
-Make-Terminal-Command
+Make Terminal Command
 =====================
-A bash script to create a new command in Terminal
+A simple bash script to create a new command in Terminal from Terminal
 Installation
 =====================
 
@@ -24,7 +24,11 @@ Changelog
 (-) Remove feature
 (*) Feature
 
-1.0 Initial Release
+1.0
+  (+) Initial Release
+
+1.1
+  (+) added the ability to install it for user or
 
 Tested Distros
 =====================
