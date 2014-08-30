@@ -10,7 +10,7 @@ function mkCmd {
                 echo "Chaning $FileName's permissions to root."
                 sudo echo chown root:root /usr/local/bin/$fileName
                 echo "Making $fileName executable."
-                sudo echo chmod 755 /usr/local/bin/$fileName
+                sudo chmod 755 /usr/local/bin/$fileName
         else
                 echo "Please enter the new file name. >> "
                 read newFileName
