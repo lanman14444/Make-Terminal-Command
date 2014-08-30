@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "This software is covered by GNU GPL v3.0"
-echo "A copy of this sothe ftware can be found at http://www.gnu.org/licenses/agpl.html "
+echo "A copy of the license can be found at http://www.gnu.org/licenses/gpl-3.0.en.html#content "
 echo ""
 function mkCmdGlobal {
         if [[ $differFileNameYN == "n" && "no" && "N" && "No" ]]
