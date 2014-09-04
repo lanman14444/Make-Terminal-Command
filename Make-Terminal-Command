@@ -44,7 +44,7 @@ function mkCmdLocal {
 }
 echo "Please enter the filename that you would like to make a command."
 read fileName
-echo "Do you want the command to differ from differ from the file name? [Y/N]"
+echo "Do you want the command to differ from the file name? [Y/N]"
 read differFileNameYN
 echo "Do you want the command to be System wide? [Y/N] (No will install it for the user only)"
 read sysOrUsr
