@@ -63,3 +63,5 @@ if [[ $keepOldFile=="n" && $keepOldFile=="no" && $keepOldFile=="N" && $keepOldFi
 		rm $fileName
 		else
 		rm $newFileName
+        fi
+fi
