@@ -3,8 +3,8 @@ echo "This software is covered by GNU GPL v3.0"
 echo "A copy of the license can be found at http://www.gnu.org/licenses/gpl-3.0.en.html#content "
 echo ""
 function mkCmdGlobal {
-        if [[ $differFileNameYN == "n" && "no" && "N" && "No" ]]
-        then
+        if [[ $differFileNameYN=="n" && $differFileNameYN=="no" && $differFileNameYN=="N" && $differFileName=="No" ]]
+                then
                 echo "Moving $fileName to /usr/local/bin."
                 sudo cp $fileName /usr/local/bin
                 echo "Chaning $FileName's permissions to root."
@@ -25,8 +25,8 @@ function mkCmdGlobal {
         fi
 }
 function mkCmdLocal {
-        if [[ $differFileNameYN == "n" && "no" && "N" && "No" ]]
-        then
+        if [[ $differFileNameYN=="n" && $differFileNameYN=="no" && $differFileNameYN=="N" && $differFileNameYN=="No" ]]
+                then
                 echo "Moving $fileName to ~/bin"
                 cp $fileName ~/bin
                 echo "Making $fileName executable."
@@ -44,13 +44,13 @@ function mkCmdLocal {
 }
 echo "Please enter the filename that you would like to make a command."
 read fileName
-echo "Do you want the command name to from differ from the file name? [Y/N]"
+echo "Do you want the command to differ from differ from the file name? [Y/N]"
 read differFileNameYN
 echo "Do you want the command to be System wide? [Y/N] (No will install it for the user only)"
 read sysOrUsr
-if [[ $sysOrUsr == "Y" && sysOrUsr == "y" && sysOrUsr == "Yes" && sysOrUsr == "yes" ]]
-	then
+if [[ $sysOrUsr=="Y" && $sysOrUsr=="y" && $sysOrUsr=="Yes" && $sysOrUsr=="yes" ]]
+        then
 	mkCmdGlobal
-else
+        else
 	mkCmdLocal
 fi
