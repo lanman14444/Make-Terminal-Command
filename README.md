@@ -34,3 +34,4 @@ Tested Distros
 =====================
 * Linux Mint 17
 * Ubuntu 14.04
+* Arch Linux
