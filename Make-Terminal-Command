@@ -56,9 +56,9 @@ if [[ $sysOrUsr=="Y" && $sysOrUsr=="y" && $sysOrUsr=="Yes" && $sysOrUsr=="yes" ]
 fi
 echo "Do you want to keep a copy of the file?"
 read keepOldFile
-if [[ $keepOldFile=="n" && $keepOldFile=="no" && $keepOldFile=="N" && $keepOldFile=="No" ]]
+if [[ $keepOldFile=="n" || $keepOldFile=="no" || $keepOldFile=="N" || $keepOldFile=="No" ]]
 	then
-	if [[ $differFileNameYN=="n" && $differFileNameYN=="no" && $differFileNameYN=="N" && $differFileNameYN=="No" ]]
+	if [[ $differFileNameYN=="n" || $differFileNameYN=="no" || $differFileNameYN=="N" || $differFileNameYN=="No" ]]
 		then
 		rm $fileName
 		else
