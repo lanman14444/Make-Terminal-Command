@@ -3,7 +3,7 @@ echo "This software is covered by GNU GPL v3.0"
 echo "A copy of the license can be found at http://www.gnu.org/licenses/gpl-3.0.en.html#content "
 echo ""
 function mkCmdGlobal {
-        if [[ $differFileNameYN=="n" || $differFileNameYN=="no" || $differFileNameYN=="N" || $differFileName=="No" ]]
+        if [ $differFileNameYN == "n" ] || [ $differFileNameYN == "no" ] || [ $differFileNameYN == "N" ] || [ $differFileNameYN == "No" ]
                 then
                 echo "Moving $fileName to /usr/local/bin."
                 sudo cp $fileName /usr/local/bin
@@ -14,10 +14,8 @@ function mkCmdGlobal {
         else
                 echo "Please enter the new file name."
                 read newFileName
-                echo "Renaming $fileName to $newFileName."
-                mv $fileName $newFileName
-                echo "Copying $newFileName to /usr/local/bin"
-                sudo cp $newFileName /usr/local/bin
+                echo "Copying $fileName to /usr/local/bin/$newFileName"
+                sudo cp $fileName /usr/local/bin/$newFileName
                 echo "Chaning $newFileName's permissions to root."
                 sudo chown root:root /usr/local/bin/$newFileName
                 echo "Making $newFileName executable." 
@@ -25,7 +23,7 @@ function mkCmdGlobal {
         fi
 }
 function mkCmdLocal {
-        if [[ $differFileNameYN=="n" || $differFileNameYN=="no" || $differFileNameYN=="N" || $differFileNameYN=="No" ]]
+        if [ $differFileNameYN == "n" ] || [ $differFileNameYN == "no" ] || [ $differFileNameYN == "N" ] || [ $differFileNameYN == "No" ]
                 then
                 echo "Moving $fileName to ~/bin"
                 cp $fileName ~/bin
@@ -48,7 +46,7 @@ echo "Do you want the command to differ from the file name? [Y/N]"
 read differFileNameYN
 echo "Do you want the command to be System wide? [Y/N] (No will install it for the user only)"
 read sysOrUsr
-if [[ $sysOrUsr=="Y" || $sysOrUsr=="y" || $sysOrUsr=="Yes" || $sysOrUsr=="yes" ]]
+if [ $sysOrUsr == "Y" ] || [ $sysOrUsr == "y" ] || [ $sysOrUsr == "Yes" ] || [ $sysOrUsr == "yes" ]
         then
 	mkCmdGlobal
         else
@@ -56,12 +54,7 @@ if [[ $sysOrUsr=="Y" || $sysOrUsr=="y" || $sysOrUsr=="Yes" || $sysOrUsr=="yes" ]
 fi
 echo "Do you want to keep a copy of the file?"
 read keepOldFile
-if [[ $keepOldFile=="n" || $keepOldFile=="no" || $keepOldFile=="N" || $keepOldFile=="No" ]]
+if [ $keepOldFile == "n" ] || [ $keepOldFile == "no" ] || [ $keepOldFile == "N" ] || [ $keepOldFile == "No" ]
 	then
-	if [[ $differFileNameYN=="n" || $differFileNameYN=="no" || $differFileNameYN=="N" || $differFileNameYN=="No" ]]
-		then
-		rm $fileName
-		else
-		rm $newFileName
-        fi
+	rm $fileName
 fi
