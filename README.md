@@ -35,5 +35,5 @@ Tested Distros
 * Linux Mint 17
 * Ubuntu 14.04
 * Arch Linux
-* macOS Sierra (Version 10.12.4)
+* macOS
 
