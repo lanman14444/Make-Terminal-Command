@@ -28,7 +28,10 @@ Changelog
   (+) Initial Release
 
 1.1
-  (+) added the ability to install it for user or
+  (+) added the ability to install it for user or globally.
+
+1.2
+  (+) Added a Termux Compatible script.
 
 Tested Distros
 =====================
@@ -36,4 +39,5 @@ Tested Distros
 * Ubuntu 14.04
 * Arch Linux
 * macOS
+* Termux (Android Terminal Emulator)
 
