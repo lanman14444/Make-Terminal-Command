@@ -1,5 +1,5 @@
 #!/bin/bash
-termuxBin=/data/data/com.termux/usr/bin
+termuxBin=/data/data/com.termux/files/usr/bin
 echo "This software is covered by GNU GPL v3.0"
 echo "A copy of the license can be found at http://www.gnu.org/licenses/gpl-3.0.en.html#content "
 echo ""
