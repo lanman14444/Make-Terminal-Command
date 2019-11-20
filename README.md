@@ -13,7 +13,9 @@ A simple bash script to create a new command in Terminal from Terminal.
 
 ## Installation
 
+You can use Make-Terminal-Command a few different ways.
 
+### Standard Installation (Doesn't work for Termux!)
 1. Copy the code from make-terminal file.
 2. Open a blank file right-click then left-click "Paste."
 3. Left click "File" then left-click "Save as".
