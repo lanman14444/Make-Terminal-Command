@@ -42,6 +42,8 @@ A simple bash script to create a new command in Terminal from Terminal.
 1.2
   (+) Added a Termux Compatible script.
 
+1.3
+  (*) Fixed local commands with different filenames removing the original file.
 ## Tested Distros
 * Linux Mint 17
 * Ubuntu 14.04
