@@ -27,7 +27,7 @@ A simple bash script to create a new command in Terminal from Terminal.
 4. Then to run it, type `./Make-Terminal-Command-Termux`
 
 
-##Changelog
+## Changelog
 
 (+) Added feature
 (-) Remove feature
@@ -44,7 +44,9 @@ A simple bash script to create a new command in Terminal from Terminal.
 
 1.3
   (*) Fixed local commands with different filenames removing the original file.
+
 ## Tested Distros
+
 * Linux Mint 17
 * Ubuntu 14.04
 * Arch Linux
