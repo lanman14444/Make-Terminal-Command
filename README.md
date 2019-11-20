@@ -2,14 +2,15 @@ Make Terminal Command
 =====================
 A simple bash script to create a new command in Terminal from Terminal.
 
-<!--ts-->
+Table of Contents
+=================
+
    * [Make Terminal Command](#make-terminal-command)
       * [Installation](#installation)
+         * [Standard Installation (Doesn't work for Termux!)](#standard-installation-doesnt-work-for-termux)
          * [Alternatively you can use Make-Terminal-Command-Termux by doing the following](#alternatively-you-can-use-make-terminal-command-termux-by-doing-the-following)
       * [Changelog](#changelog)
       * [Tested Distros](#tested-distros)
-
-<!--te-->
 
 ## Installation
 
