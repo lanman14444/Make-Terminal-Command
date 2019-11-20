@@ -1,16 +1,16 @@
-Make Terminal Command
-=====================
-A simple bash script to create a new command in Terminal from Terminal.
-
 Table of Contents
 =================
 
-   * [Make Terminal Command](#make-terminal-command)
-      * [Installation](#installation)
-         * [Standard Installation (Doesn't work for Termux!)](#standard-installation-doesnt-work-for-termux)
-         * [Alternatively you can use Make-Terminal-Command-Termux by doing the following](#alternatively-you-can-use-make-terminal-command-termux-by-doing-the-following)
-      * [Changelog](#changelog)
-      * [Tested Distros](#tested-distros)
+  * [Make Terminal Command](#make-terminal-command)
+     * [Installation](#installation)
+        * [Standard Installation](#standard-installation-doesnt-work-for-termux)
+        * [Termux Installation](#termux-installation)
+     * [Changelog](#changelog)
+     * [Tested Distros](#tested-distros)
+
+Make Terminal Command
+=====================
+A simple bash script to create a new command in Terminal from Terminal.
 
 ## Installation
 
@@ -31,7 +31,7 @@ You can use Make-Terminal-Command a few different ways.
 13. Naviagte to the directory that the script is in the terminal
 14. Then to run it type ./Make-Terminal-Command
 
-### Alternatively you can use Make-Terminal-Command-Termux by doing the following
+### Termux Installation
 
 1. Clone the git repo with `git clone https://github.com/lanman14444/Make-Terminal-Command.git`
 2. cd into the directory that was cloned.
@@ -64,4 +64,3 @@ You can use Make-Terminal-Command a few different ways.
 * Arch Linux
 * macOS
 * Termux (Android Terminal Emulator)
-
