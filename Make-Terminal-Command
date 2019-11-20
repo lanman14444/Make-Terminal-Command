@@ -32,10 +32,8 @@ function mkCmdLocal {
         else
                 echo "Please enter the new file name."
                 read newFileName
-                echo "Renaming $fileName to $newFileName."
-                mv $fileName $newFileName
-                echo "Copying $newFileName to ~/bin"
-                cp $newFileName ~/bin
+                echo "Copying $fileName to ~/bin/$newFileName"
+                cp $fileName ~/bin/$newFileName
                 echo "Making $newFileName executable." 
                 chmod 755 ~/bin/$newFileName
         fi
