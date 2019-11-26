@@ -3,7 +3,7 @@ Table of Contents
 
   * [Make Terminal Command](#make-terminal-command)
      * [Installation](#installation)
-        * [Standard Installation](#standard-installation-doesnt-work-for-termux)
+        * [Standard Installation](#standard-installation)
         * [Termux Installation](#termux-installation)
      * [Changelog](#changelog)
      * [Tested Distros](#tested-distros)
@@ -16,7 +16,7 @@ A simple bash script to create a new command in Terminal from Terminal.
 
 You can use Make-Terminal-Command a few different ways.
 
-### Standard Installation (Doesn't work for Termux!)
+### Standard Installation
 1. Copy the code from make-terminal file.
 2. Open a blank file right-click then left-click "Paste."
 3. Left click "File" then left-click "Save as".
@@ -38,6 +38,14 @@ You can use Make-Terminal-Command a few different ways.
 3. Run `chmod 777 Make-Terminal-Command-Termux`
 4. Then to run it, type `./Make-Terminal-Command-Termux`
 
+### How to make script a global command
+1. Clone the git repo with `git clone https://github.com/lanman14444/Make-Terminal-Command.git`
+2. Change directories to the cloned repo.
+3. Type `chmod 777 Make-Terminal-Command` or `chmod 777 Make-Terminal-Command-Termux`
+4. Run `./Make-Terminal-Command` (or Make-Terminal-Command-Termux).
+5. When asked for file name, provide the name of the script.
+6. Choose the name of it you want for the command.
+7. Follow the rest of the onscreen instructions.
 
 ## Changelog
 

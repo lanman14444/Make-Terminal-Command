@@ -2,24 +2,45 @@
 echo "This software is covered by GNU GPL v3.0"
 echo "A copy of the license can be found at http://www.gnu.org/licenses/gpl-3.0.en.html#content "
 echo ""
+
+termuxBin=/data/data/com.termux/files/usr/bin
+
 function mkCmdGlobal {
         if [ $differFileNameYN == "n" ] || [ $differFileNameYN == "no" ] || [ $differFileNameYN == "N" ] || [ $differFileNameYN == "No" ]
                 then
-                echo "Moving $fileName to /usr/local/bin."
-                sudo cp $fileName /usr/local/bin
-                echo "Chaning $FileName's permissions to root."
-                sudo chown root:root /usr/local/bin/$fileName
-                echo "Making $fileName executable."
-                sudo chmod 755 /usr/local/bin/$fileName
+                if [ -d /usr/local/bin ]
+                	then
+					echo "Moving $fileName to /usr/local/bin"
+                	sudo cp $fileName /usr/local/bin
+                	echo "Chaning $FileName's permissions to root."
+                	sudo chown root:root /usr/local/bin/$fileName
+                	echo "Making $fileName executable."
+                	sudo chmod 755 /usr/local/bin/$fileName
+                else
+                	echo "Moving $fileName to $termuxBin."
+                	cp $fileName $termuxBin/$fileName
+                	echo "Making $fileName executable."
+                	chmod 755 $termuxBin/$fileName
+                fi
         else
-                echo "Please enter the new file name."
-                read newFileName
-                echo "Copying $fileName to /usr/local/bin/$newFileName"
-                sudo cp $fileName /usr/local/bin/$newFileName
-                echo "Chaning $newFileName's permissions to root."
-                sudo chown root:root /usr/local/bin/$newFileName
-                echo "Making $newFileName executable." 
-                sudo chmod 755 /usr/local/bin/$newFileName
+        		if [ -d /usr/local/bin ]
+        			then
+                	echo "Please enter the new file name."
+                	read newFileName
+                	echo "Copying $fileName to /usr/local/bin/$newFileName"
+                	sudo cp $fileName /usr/local/bin/$newFileName
+                	echo "Chaning $newFileName's permissions to root."
+                	sudo chown root:root /usr/local/bin/$newFileName
+                	echo "Making $newFileName executable." 
+                	sudo chmod 755 /usr/local/bin/$newFileName
+                else
+                	echo "Please enter the new file name."
+                	read newFileName
+                	echo "Copying $fileName to $termuxBin/newFileName"
+                	cp $fileName $termuxBin/$newFileName
+                	echo "Making $newFileName executable."
+                	chmod 755 $termuxBin/$newFileName
+                fi
         fi
 }
 function mkCmdLocal {
@@ -50,6 +71,7 @@ if [ $sysOrUsr == "Y" ] || [ $sysOrUsr == "y" ] || [ $sysOrUsr == "Yes" ] || [ $
         else
 	mkCmdLocal
 fi
+
 echo "Do you want to keep a copy of the file?"
 read keepOldFile
 if [ $keepOldFile == "n" ] || [ $keepOldFile == "no" ] || [ $keepOldFile == "N" ] || [ $keepOldFile == "No" ]
