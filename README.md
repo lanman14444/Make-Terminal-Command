@@ -62,12 +62,13 @@ You can use Make-Terminal-Command a few different ways.
   (*) Fixed local commands with different filenames removing the original file.
 
 1.4
-	(+) Combined Make-Terminal-Command and Make-Terminal-Command-Termux
+  (-) Remove need for Termux Compatible Script to be separate.
+  (+) Combined Make-Terminal-Command and Make-Terminal-Command-Termux
 
 ## Tested Distros
 
-* Linux Mint 17
-* Ubuntu 14.04
-* Arch Linux
-* macOS
-* Termux (Android Terminal Emulator)
+* **Linux Mint 17**
+* **Ubuntu 14.04**
+* **Arch Linux**
+* **macOS**
+* **Termux (Android Terminal Emulator)**
