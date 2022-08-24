@@ -10,9 +10,9 @@ function mkCmdGlobal {
                 then
                 if [ -d /usr/local/bin ]
                 	then
-					echo "Moving $fileName to /usr/local/bin"
+			echo "Moving $fileName to /usr/local/bin"
                 	sudo cp $fileName /usr/local/bin
-                	echo "Chaning $FileName's permissions to root."
+                	echo "Chaning $fileName's permissions to root."
                 	sudo chown root:root /usr/local/bin/$fileName
                 	echo "Making $fileName executable."
                 	sudo chmod 755 /usr/local/bin/$fileName
