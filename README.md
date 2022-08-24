@@ -36,7 +36,7 @@ You can use Make-Terminal-Command a few different ways.
 
 (+) Added feature
 (-) Remove feature
-(*) Feature
+(*) Feature/Bug Fix
 
 1.0
   (+) Initial Release
@@ -54,11 +54,14 @@ You can use Make-Terminal-Command a few different ways.
   (-) Remove need for Termux Compatible Script to be separate.
   (+) Combined Make-Terminal-Command and Make-Terminal-Command-Termux
 
+1.4.1
+  (*) Fixed $fileName being set to $FileName on one line.
+
 ## Tested Distros
 
 * **Linux Mint and LMDE**
 * **Ubuntu**
 * **Arch Linux**
-* **Manjaro (KDE Variant)**
+* **Manjaro**
 * **macOS**
 * **Termux (Android Terminal Emulator)**
